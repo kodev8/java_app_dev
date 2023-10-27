@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class ReverseInt {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Enter your number: ");
 		int number = scanner.nextInt();
+		scanner.close();
 		
 		int store = 0;
 		
@@ -26,7 +26,6 @@ public class ReverseInt {
 		}
 		
 		System.out.println(store);
-		scanner.close();
 
 	}
 

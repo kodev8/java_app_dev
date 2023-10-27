@@ -34,11 +34,9 @@ public class Files {
 //		method 2 - with buffer
 		Scanner scanner = new Scanner(System.in);
 		FileWriter fileWriter2 = new FileWriter(makePath("3"));
-		String fileData = "";
-		BufferedWriter buffer = null;
-		
+		String fileData;
 		System.out.println("Enter the file content: ");
-		buffer = new BufferedWriter(fileWriter2);
+		BufferedWriter buffer = new BufferedWriter(fileWriter2);
 		
 		while (true) {
 			fileData=scanner.nextLine();
