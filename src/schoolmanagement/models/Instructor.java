@@ -1,12 +1,15 @@
 package schoolmanagement.models;
 
+import java.math.BigInteger;
+
 public class Instructor {
 
 	private String instructorId;
 	private String name;
 	private String subject;
-	private int phoneNumber;
+	private BigInteger phoneNumber;
 	private String email;
+	private String targetYear;
 	
 	public String getInstructorId() {
 		return instructorId;
@@ -18,6 +21,14 @@ public class Instructor {
 
 	public String getName() {
 		return name;
+	}
+
+	public String getTargetYear() {
+		return targetYear;
+	}
+
+	public void setTargetYear(String targetYear) {
+		this.targetYear = targetYear;
 	}
 
 	public void setName(String name) {
@@ -32,11 +43,11 @@ public class Instructor {
 		this.subject = subject;
 	}
 
-	public int getPhoneNumber() {
+	public BigInteger getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(BigInteger phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -46,6 +57,12 @@ public class Instructor {
 	
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Instructor [instructorId=" + instructorId + ", name=" + name + ", subject=" + subject
+				+ ", phoneNumber=" + phoneNumber + ", email=" + email + ", targetYear=" + targetYear + "]";
 	}
 	
 	
