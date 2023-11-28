@@ -57,7 +57,8 @@ public class Main {
 			PaymentService paymentService = new PaymentService();
 			ArrayList<Student> students = paymentService.read();
 			students.add(student);
-			Collections.sort(students, new Student.Sorter());
+			// use Collectiions.reverseOrder() to sort in descending order
+			Collections.sort(students, new Student.Sorter()); // sort by year then by age
 			System.out.println("Sorted Students: ");
 			System.out.println();
 			students.forEach(System.out::println);
